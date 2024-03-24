@@ -25,7 +25,7 @@ h1, h2, h3 {
 }
 
 /* Mixins */
-.GlobalButton button, .containerAuthor__functions-submit button, .homepage__role--btn-options .opt2 button, .homepage__role--btn-options .opt1 button {
+.GlobalButton button, .containerReviewer__functions-submit button, .containerAuthor__functions-submit button, .homepage__role--btn-options .opt2 button, .homepage__role--btn-options .opt1 button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 12px;
@@ -40,7 +40,7 @@ h1, h2, h3 {
   border: 2px solid #fff;
 }
 
-.StylesInput input, .containerAuthor__functions-name input, .containerAuthor__functions-tokens input {
+.StylesInput input, .containerReviewer__functions-description input, .containerAuthor__functions-name input, .containerAuthor__functions-tokens input {
   height: 30px;
   font-weight: 500;
   border-radius: 4px;
@@ -48,12 +48,12 @@ h1, h2, h3 {
   transition: all 0.5s ease;
   background-color: transparent;
 }
-.StylesInput input:focus, .containerAuthor__functions-name input:focus, .containerAuthor__functions-tokens input:focus, .StylesInput input:active, .containerAuthor__functions-name input:active, .containerAuthor__functions-tokens input:active {
+.StylesInput input:focus, .containerReviewer__functions-description input:focus, .containerAuthor__functions-name input:focus, .containerAuthor__functions-tokens input:focus, .StylesInput input:active, .containerReviewer__functions-description input:active, .containerAuthor__functions-name input:active, .containerAuthor__functions-tokens input:active {
   border: none;
   outline: none;
 }
 
-.StylesTextarea textarea, .containerAuthor__functions-description textarea {
+.StylesTextarea textarea, .containerReviewer__functions-review textarea, .containerAuthor__functions-description textarea {
   height: 100px !important;
   resize: none;
   padding: 8px;
@@ -62,12 +62,12 @@ h1, h2, h3 {
   transition: all 0.5s ease;
   background-color: transparent;
 }
-.StylesTextarea textarea:focus, .containerAuthor__functions-description textarea:focus, .StylesTextarea textarea:active, .containerAuthor__functions-description textarea:active {
+.StylesTextarea textarea:focus, .containerReviewer__functions-review textarea:focus, .containerAuthor__functions-description textarea:focus, .StylesTextarea textarea:active, .containerReviewer__functions-review textarea:active, .containerAuthor__functions-description textarea:active {
   border: none;
   outline: none;
 }
 
-.StylesArrow, .containerAuthor__role--arrow {
+.StylesArrow, .containerReviewer__role--arrow, .containerAuthor__role--arrow {
   width: 50px;
   height: 50px;
   padding: 5px;
@@ -77,7 +77,7 @@ h1, h2, h3 {
   transition: all 0.5s ease;
   border: 1px solid transparent;
 }
-.StylesArrow img, .containerAuthor__role--arrow img {
+.StylesArrow img, .containerReviewer__role--arrow img, .containerAuthor__role--arrow img {
   width: 100%;
 }
 
@@ -305,6 +305,131 @@ h1, h2, h3 {
   border: 2px dotted #0090ff;
 }
 .containerAuthor__article--input {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 80%;
+  gap: 8px;
+}
+
+.containerReviewer {
+  grid-template-rows: 80px auto;
+  margin-top: 50px !important;
+  grid-template-columns: 65% 35%;
+  width: 1000px;
+  display: grid;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-top: 100px;
+}
+.containerReviewer__role {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+}
+.containerReviewer__role--arrow:hover {
+  border: 1px solid #37bdcb;
+}
+.containerReviewer__role h1 {
+  font-size: 50px;
+  color: #37bdcb;
+}
+.containerReviewer__functions {
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+}
+.containerReviewer__functions form {
+  flex-direction: column;
+  display: flex;
+  width: 80%;
+  gap: 12px;
+}
+.containerReviewer__functions-name {
+  flex-direction: column;
+  display: flex;
+  gap: 8px;
+}
+.containerReviewer__functions-name label {
+  font-weight: 700;
+}
+.containerReviewer__functions-name select {
+  height: 30px;
+  outline: none;
+  font-weight: 500;
+  border-radius: 4px;
+  padding-left: 12px;
+  color: #fff;
+  transition: all 0.5s ease;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: transparent;
+  border: 1px solid #37bdcb;
+}
+.containerReviewer__functions-name select:hover {
+  box-shadow: 0 0 10px 0 #37bdcb;
+}
+.containerReviewer__functions-name select:focus, .containerReviewer__functions-name select:active {
+  color: #000;
+  background-color: #37bdcb;
+}
+.containerReviewer__functions-description {
+  flex-direction: column;
+  display: flex;
+  gap: 8px;
+}
+.containerReviewer__functions-description label {
+  font-weight: 700;
+}
+.containerReviewer__functions-description input {
+  color: #fff;
+  font-family: "Wix Madefor Text", sans-serif;
+  border: 1px solid #37bdcb;
+}
+.containerReviewer__functions-description input:hover {
+  box-shadow: 0 0 10px 0 #37bdcb;
+}
+.containerReviewer__functions-description input:active, .containerReviewer__functions-description input:focus {
+  color: #000;
+  background-color: #37bdcb;
+}
+.containerReviewer__functions-review {
+  flex-direction: column;
+  display: flex;
+  gap: 8px;
+}
+.containerReviewer__functions-review label {
+  font-weight: 700;
+}
+.containerReviewer__functions-review textarea {
+  color: #fff;
+  font-family: "Wix Madefor Text", sans-serif;
+  border: 1px solid #37bdcb;
+}
+.containerReviewer__functions-review textarea:hover {
+  box-shadow: 0 0 10px 0 #37bdcb;
+}
+.containerReviewer__functions-review textarea:active, .containerReviewer__functions-review textarea:focus {
+  color: #000;
+  background-color: #37bdcb;
+}
+.containerReviewer__functions-submit {
+  margin-top: 12px;
+}
+.containerReviewer__functions-submit button:hover {
+  color: #37bdcb;
+  border: 2px solid #37bdcb;
+  box-shadow: 0 0 5px 1px #37bdcb;
+}
+.containerReviewer__article {
+  place-items: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  border-radius: 12px;
+  border: 2px dotted #37bdcb;
+}
+.containerReviewer__article--input {
   flex-direction: column;
   align-items: center;
   display: flex;

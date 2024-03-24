@@ -1,0 +1,96 @@
+.containerReviewer {
+  grid-template-rows: 80px auto;
+  margin-top: 50px !important;
+  @include Structure-Container;
+  &__role {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    &--arrow{
+      @include btn-Arrow;
+    }
+    &--arrow:hover{
+      border: 1px solid $Tertiary-Color;
+    }
+    h1{
+      font-size: 50px;
+      color: $Tertiary-Color;
+    }
+  }
+  &__functions {
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    form{
+      flex-direction: column;
+      display: flex;
+      width: 80%;
+      gap: 12px;
+    }
+    &-name{
+      flex-direction: column;
+      display: flex;
+      gap: 8px;
+      label{
+        font-weight: 700;
+      }
+      select{
+        height: 30px;
+        outline: none;
+        font-weight: 500;
+        border-radius: 4px;
+        padding-left: 12px;
+        color: $White-Color;
+        transition: all 0.5s ease;
+        font-family: $Primary-Font;
+        background-color: transparent;
+        border: 1px solid $Tertiary-Color;
+      }
+      select:hover{
+        box-shadow: 0 0 10px 0 $Tertiary-Color;
+      }
+      select:focus, select:active{
+        color: $Primary-Color;
+        background-color: $Tertiary-Color;
+      }
+    }
+    &-description{
+      flex-direction: column;
+      display: flex;
+      gap: 8px;
+      label{
+        font-weight: 700;
+      }
+      @include Secondary-Input;
+    }
+    &-review{
+      flex-direction: column;
+      display: flex;
+      gap: 8px;
+      label{
+        font-weight: 700;
+      }
+      @include Secondary-textarea;
+    }
+    &-submit{
+      margin-top: 12px;
+      @include Secondary-Button;
+    }
+  }
+  &__article {
+    place-items: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    border-radius: 12px;
+    border: 2px dotted $Tertiary-Color;
+    &--input {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 80%;
+      gap: 8px;
+    }
+  }
+}

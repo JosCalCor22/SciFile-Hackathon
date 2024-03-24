@@ -26,7 +26,7 @@ function HomePage () {
             </div>
             <div className="opt2">
               <Link to="/reviewer">
-                <button>Reviwer</button>
+                <button>Reviewer</button>
               </Link>
             </div>
           </div>

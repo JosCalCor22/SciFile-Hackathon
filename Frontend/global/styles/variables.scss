@@ -136,6 +136,22 @@ h1, h2, h3{
   }
 }
 
+@mixin Secondary-Input{
+  @extend .StylesInput;
+  input{
+    color: $White-Color;
+    font-family: $Primary-Font;
+    border: 1px solid $Tertiary-Color;
+  }
+  input:hover{
+    box-shadow: 0 0 10px 0 $Tertiary-Color;
+  }
+  input:active, input:focus{
+    color: $Primary-Color;
+    background-color: $Tertiary-Color;
+  }
+}
+
 @mixin Primary-textarea{
   @extend .StylesTextarea;
   textarea{
@@ -149,6 +165,22 @@ h1, h2, h3{
   textarea:active, textarea:focus{
     color: $Primary-Color;
     background-color: $Secondary-Color;
+  }
+}
+
+@mixin Secondary-textarea{
+  @extend .StylesTextarea;
+  textarea{
+    color: $White-Color;
+    font-family: $Primary-Font;
+    border: 1px solid $Tertiary-Color;
+  }
+  textarea:hover{
+    box-shadow: 0 0 10px 0 $Tertiary-Color;
+  }
+  textarea:active, textarea:focus{
+    color: $Primary-Color;
+    background-color: $Tertiary-Color;
   }
 }
 
