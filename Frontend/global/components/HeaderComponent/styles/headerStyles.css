@@ -1,0 +1,9 @@
+.header {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  padding: 40px 20px;
+}
+.header__logo p span:first-child {
+  color: blueviolet;
+}/*# sourceMappingURL=headerStyles.css.map */

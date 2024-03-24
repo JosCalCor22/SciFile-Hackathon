@@ -1,0 +1,48 @@
+.homepage{
+  grid-template-columns: 65% 35%;
+  width: 1000px;
+  display: grid;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-top: 100px;
+  &__info{
+    &--description{
+      width: 450px;
+      margin-bottom: 20px;
+      p{
+        color: $White-Opacity-Color;
+      }
+    }
+    &--slogan{
+      width: 400px;
+      span{
+        font-size: 50px;
+        font-weight: 700;
+      }
+      span:nth-child(3){
+        color: $Secondary-Color;
+      }
+      span:nth-child(5){
+        color: $Tertiary-Color;
+      }
+    }
+  }
+  &__role{
+    justify-content: center;
+    display: flex;
+    border-left: 1px solid $White-Color;
+    &--btn{
+      &-options{
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+        .opt1{
+          @include Primary-Button;
+        }
+        .opt2{
+          @include Secondary-Button;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.header{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px; 
+  &__logo{
+    p{
+      span:nth-child(2){
+        color: $Secondary-Color;
+      }
+      span:nth-child(3){
+        color: $Tertiary-Color;
+      }
+    }
+  }
+}

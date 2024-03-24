@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* Pallete Colors */
+$Primary-Color: #000;
+$Secondary-Color: #0090ff;
+$Tertiary-Color: #37bdcb;
+
+/* Other Colors */
+$White-Color: #fff;
+$Extra-Color: #007f8c;
+$White-Opacity-Color: rgba(255, 255, 255, 0.5);
+
+/* Fonts */
+$Primary-Font: 'Wix Madefor Text', sans-serif;
+
+/* Bold Fonts */
+$Text-Bold: 500;
+$Tittle-Bold: 700;
+
+/* Global Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: $White-Color;
+  font-family: $Primary-Font;
+  background-color: $Primary-Color;
+}
+
+p{
+  font-weight: $Text-Bold;
+}
+
+h1, h2, h3{
+  font-weight: $Tittle-Bold;
+}
+
+/* Mixins */
+.GlobalButton{
+  button{
+    width: fit-content;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    color: $White-Color;
+    transition: all 0.5s ease;
+    font-weight: $Tittle-Bold;
+    font-family: $Primary-Font;
+    background-color: transparent;
+    border: 2px solid $White-Color;
+  }
+}
+
+@mixin Primary-Button{
+  @extend .GlobalButton;  
+
+  button:hover{
+    color: $Secondary-Color;
+    border: 2px solid $Secondary-Color;
+    box-shadow: 0 0 5px 1px $Secondary-Color;
+  }
+}
+
+@mixin Secondary-Button{
+  @extend .GlobalButton;
+
+  button:hover{
+    color: $Tertiary-Color;
+    border: 2px solid $Tertiary-Color;
+    box-shadow: 0 0 5px 1px $Tertiary-Color;
+  }
+}
+
+/* Styles for component SDK */
+.tw-transition-all{
+  border-radius: 12px;
+  background-color: $Primary-Color;
+  box-shadow: 0 0 10px 1px $Secondary-Color;
+}
+
+.tw-ease-out{
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.tw-to-orange-500{
+  background: linear-gradient(90deg, $Secondary-Color, $Extra-Color);
+}
+
+.tw-text-blue-500{
+  width: fit-content;
+  padding: 12px !important;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: $Secondary-Color;
+  margin: 12px auto 0 auto;
+  transition: all 0.5s ease;
+  font-weight: $Tittle-Bold;
+  font-family: $Primary-Font;
+  background-color: transparent;
+  border: 2px solid $Secondary-Color;
+}
+
+.tw-text-blue-500:hover{
+  box-shadow: 0 0 5px 1px $Secondary-Color;
+}
+
+.tw-justify-end button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  background-color: $White-Color;
+}
+
+.tw-justify-end button:hover{
+  border: 1px solid $Secondary-Color;
+  box-shadow: 0 0 5px 1px $Secondary-Color;
+}
+
+.tw-content-center button{
+  height: fit-content;
+  width: fit-content;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid $Secondary-Color;
+}
+
+.tw-content-center button:hover{
+  box-shadow: 0 0 5px 1px $Secondary-Color;
+}

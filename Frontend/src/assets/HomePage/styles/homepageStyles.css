@@ -1,0 +1,9 @@
+.homepage {
+  grid-template-columns: 70% 30%;
+  display: grid;
+  padding: 0 30px;
+}
+.homepage__info span {
+  font-size: 50px;
+  font-weight: 700;
+}/*# sourceMappingURL=homepageStyles.css.map */

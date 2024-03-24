@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
+/* Pallete Colors */
+/* Other Colors */
+/* Fonts */
+/* Bold Fonts */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: #000;
+}
+
+p {
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Mixins */
+.GlobalButton button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: #fff;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+/* Styles for component SDK */
+.tw-transition-all {
+  border-radius: 12px;
+  background-color: #000;
+  box-shadow: 0 0 10px 1px #0090ff;
+}
+
+.tw-ease-out {
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.tw-to-orange-500 {
+  background: linear-gradient(90deg, #0090ff, #007f8c);
+}
+
+.tw-text-blue-500 {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px !important;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: #0090ff;
+  margin: 12px auto 0 auto;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: transparent;
+  border: 2px solid #0090ff;
+}
+
+.tw-text-blue-500:hover {
+  box-shadow: 0 0 5px 1px #0090ff;
+}
+
+.tw-justify-end button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  background-color: #fff;
+}
+
+.tw-justify-end button:hover {
+  border: 1px solid #0090ff;
+  box-shadow: 0 0 5px 1px #0090ff;
+}
+
+.tw-content-center button {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #0090ff;
+}
+
+.tw-content-center button:hover {
+  box-shadow: 0 0 5px 1px #0090ff;
+}/*# sourceMappingURL=variables.css.map */
