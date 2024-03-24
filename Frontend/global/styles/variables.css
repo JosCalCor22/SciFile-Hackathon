@@ -40,6 +40,47 @@ h1, h2, h3 {
   border: 2px solid #fff;
 }
 
+.StylesInput input {
+  height: 30px;
+  font-weight: 500;
+  border-radius: 4px;
+  padding-left: 12px;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+.StylesInput input:focus, .StylesInput input:active {
+  border: none;
+  outline: none;
+}
+
+.StylesTextarea textarea {
+  height: 100px !important;
+  resize: none;
+  padding: 8px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+.StylesTextarea textarea:focus, .StylesTextarea textarea:active {
+  border: none;
+  outline: none;
+}
+
+.StylesArrow {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 6px 12px 0 0;
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+}
+.StylesArrow img {
+  width: 100%;
+}
+
 /* Styles for component SDK */
 .tw-transition-all {
   border-radius: 12px;

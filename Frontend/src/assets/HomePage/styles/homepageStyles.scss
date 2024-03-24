@@ -1,10 +1,5 @@
 .homepage{
-  grid-template-columns: 65% 35%;
-  width: 1000px;
-  display: grid;
-  margin: 0 auto;
-  padding: 0 30px;
-  margin-top: 100px;
+  @include Structure-Container;
   &__info{
     &--description{
       width: 450px;

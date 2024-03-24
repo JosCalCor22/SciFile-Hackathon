@@ -6,7 +6,7 @@ import { MetaMaskButton, useAccount, useSignMessage } from "@metamask/sdk-react-
   return (
     <header className="header">
       <div className="header__logo">
-        <h1>SciFile</h1>
+          <h1>SciFile</h1>
       </div>
       <div className="header__btnWallet">
         <MetaMaskButton theme={"dark"} color="red" ></MetaMaskButton>

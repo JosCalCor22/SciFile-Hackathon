@@ -55,6 +55,51 @@ h1, h2, h3{
   }
 }
 
+.StylesInput{
+  input{
+    height: 30px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding-left: 12px;
+    transition: all 0.5s ease;
+    background-color: transparent;
+  }
+  input:focus, input:active{
+    border: none;
+    outline: none; 
+  }
+}
+
+.StylesTextarea{
+  textarea{
+    height: 100px !important;
+    resize: none;
+    padding: 8px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+    background-color: transparent;
+  }
+  textarea:focus, textarea:active{
+    border: none;
+    outline: none; 
+  }
+}
+
+.StylesArrow{
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 6px 12px 0 0;
+  transition: all 0.5s ease;
+  border: 1px solid transparent;
+  img{
+    width: 100%;
+  }
+}
+
 @mixin Primary-Button{
   @extend .GlobalButton;  
 
@@ -73,6 +118,51 @@ h1, h2, h3{
     border: 2px solid $Tertiary-Color;
     box-shadow: 0 0 5px 1px $Tertiary-Color;
   }
+}
+
+@mixin Primary-Input{
+  @extend .StylesInput;
+  input{
+    color: $White-Color;
+    font-family: $Primary-Font;
+    border: 1px solid $Secondary-Color;
+  }
+  input:hover{
+    box-shadow: 0 0 10px 0 $Secondary-Color;
+  }
+  input:active, input:focus{
+    color: $Primary-Color;
+    background-color: $Secondary-Color;
+  }
+}
+
+@mixin Primary-textarea{
+  @extend .StylesTextarea;
+  textarea{
+    color: $White-Color;
+    font-family: $Primary-Font;
+    border: 1px solid $Secondary-Color;
+  }
+  textarea:hover{
+    box-shadow: 0 0 10px 0 $Secondary-Color;
+  }
+  textarea:active, textarea:focus{
+    color: $Primary-Color;
+    background-color: $Secondary-Color;
+  }
+}
+
+@mixin btn-Arrow{
+  @extend .StylesArrow;
+}
+
+@mixin Structure-Container{
+  grid-template-columns: 65% 35%;
+  width: 1000px;
+  display: grid;
+  margin: 0 auto;
+  padding: 0 30px;
+  margin-top: 100px;
 }
 
 /* Styles for component SDK */

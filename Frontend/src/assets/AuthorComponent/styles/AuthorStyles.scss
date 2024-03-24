@@ -1,0 +1,69 @@
+.containerAuthor {
+  grid-template-rows: 80px auto;
+  margin-top: 50px !important;
+  @include Structure-Container;
+  &__role {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    &--arrow{
+      @include btn-Arrow;
+    }
+    &--arrow:hover{
+      border: 1px solid $Secondary-Color;
+    }
+    h1{
+      font-size: 50px;
+      color: $Secondary-Color;
+    }
+  }
+  &__functions {
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    form{
+      flex-direction: column;
+      display: flex;
+      width: 80%;
+      gap: 12px;
+    }
+    &-name, &-tokens{
+      flex-direction: column;
+      display: flex;
+      gap: 8px;
+      label{
+        font-weight: 700;
+      }
+      @include Primary-Input;
+    }
+    &-description{
+      flex-direction: column;
+      display: flex;
+      gap: 8px;
+      label{
+        font-weight: 700;
+      }
+      @include Primary-textarea;
+    }
+    &-submit{
+      margin-top: 12px;
+      @include Primary-Button;
+    }
+  }
+  &__article {
+    place-items: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    border-radius: 12px;
+    border: 2px dotted $Secondary-Color;
+    &--input {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 80%;
+      gap: 8px;
+    }
+  }
+}
