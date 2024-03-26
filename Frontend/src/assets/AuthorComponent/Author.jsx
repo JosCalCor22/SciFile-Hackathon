@@ -1,8 +1,47 @@
+import axios from 'axios';
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import arrow from './svg/arrow.svg'
 
-function Author () {
+const URLAPI = 'https://ed45-186-154-34-66.ngrok-free.app/hola_mundo/';
+
+function Author () { 
+  const [message, setMessage] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleSubmit = async () => {
+    const response = await axios.post(URLAPI , {
+      message: message,
+    });
+  
+    console.log(response);
+  }
+
+  const getFile = (event) => {
+    setSelectedFile(event.target.files[0]);
+  }
+
+  const getAllItems = () => {
+    const takeName = document.getElementById('name-article');
+    const takeDescription = document.getElementById('description-article');
+    const takeTokens = document.getElementById('tokens-reward');
+
+    const objectJSON = {
+      name: takeName.value,
+      description: takeDescription.value,
+      tokens: takeTokens.value,
+    }
+
+    const formData = new FormData();
+    formData.append('object', JSON.stringify(objectJSON));
+    formData.append('file', selectedFile);
+
+    for(let [key, value] of formData.entries()) {
+      console.log(key, value);
+    }
+  }
+
   return(
     <section className="containerAuthor">
       <div className="containerAuthor__role">
@@ -14,7 +53,7 @@ function Author () {
         <h1>Author</h1>
       </div>
       <section className="containerAuthor__functions">
-        <form action="#" method="post">
+        <form>
           <div className="containerAuthor__functions-name">
             <label htmlFor="name-article">Name article:</label>
             <input type="text" name="name-article" id="name-article" required />
@@ -28,14 +67,14 @@ function Author () {
             <input type="number" name="tokens-reward" id="tokens-reward" min="1" max="10" required />
           </div>
           <div className="containerAuthor__functions-submit">
-            <button type="submit">Submit</button>
+            <button type='button' onClick={getAllItems}>Submit</button>
           </div>
         </form>
       </section>
       <section className="containerAuthor__article">
         <div className="containerAuthor__article--input">
           <label htmlFor="article">Choose an article</label>
-          <input type="file" name="article" id="article" />
+          <input type="file" onChange={getFile} name="article" id="article" required/>
         </div>
       </section>
     </section>
