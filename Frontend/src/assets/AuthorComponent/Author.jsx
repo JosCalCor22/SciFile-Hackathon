@@ -8,7 +8,7 @@ import { ethers } from 'ethers';
 /* SVG imports */
 import arrow from './svg/arrow.svg'
 
-const URL = `https://ef6e-186-154-34-66.ngrok-free.app`
+const URL = `https://172c-186-154-34-66.ngrok-free.app`
 const URLAPIDATA = `${URL}/upload_meta_article/`;
 const URLAPIFILE = `${URL}/upload_file/`;
 const URLAPI = `${URL}/hola_mundo/`;
@@ -57,7 +57,7 @@ function Author() {
       if (response_json) {
         const txt_nft = await mint(
           accounts[0]?.address,
-          1,
+          1,// response_json.id
           1,
           "0x"
         );
@@ -68,7 +68,7 @@ function Author() {
 
         const txt_token = await mint(
           accounts[0]?.address,
-          2,
+          2,// response_json.id + 1
           json.tokens,
           "0x"
         );
@@ -78,7 +78,7 @@ function Author() {
         console.log(txt_token);
 
 
-        const txt_url = await setUrl(response_json);
+        const txt_url = await setUrl(response_json);//response_json.uri
 
         await delay(1000);
 
@@ -143,6 +143,12 @@ function Author() {
         setUploadStatus('Upload successful!');
         console.log('Success:', response.data);
         console.log(`File Hash: https://files.lighthouse.storage/viewFile/${response.data.Hash}`);
+        /*
+        return {
+          uri : `https://files.lighthouse.storage/viewFile/${response.data.Hash}`,
+          id : response.data.id
+        }
+        */
         return `https://files.lighthouse.storage/viewFile/${response.data.Hash}`
       } else {
         // Handle potential "Unprocessable Content" error
