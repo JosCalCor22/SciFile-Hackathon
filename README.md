@@ -47,8 +47,8 @@ The frontend, created with *React, provides an intuitive and efficient user inte
 *SciFile* represents a significant step toward democratizing scientific knowledge, promoting transparency and collaboration within the scientific community. With its focus on security, efficiency, and accessibility, SciFile is well-positioned to become a benchmark in scientific publication management and the peer review process, contributing to the advancement of science and technology.
 
 ## Demo
-<https://dorahacks.io/buidl/10846>
-<https://quick-raincoat-crooked.on-fleek.app/>
+* <https://quick-raincoat-crooked.on-fleek.app/>
+* DoraHacks link coming soon . . .
 
 ## React + Vite
 
