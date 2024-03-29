@@ -43,7 +43,7 @@ a{
   color: $White-Color;
 }
 
-/* Mixins */
+/* Mixins and Classes */
 .GlobalButton{
   button{
     width: fit-content;
@@ -122,6 +122,16 @@ a{
     color: $Tertiary-Color;
     border: 2px solid $Tertiary-Color;
     box-shadow: 0 0 5px 1px $Tertiary-Color;
+  }
+}
+
+@mixin Tertiary-Button{
+  @extend .GlobalButton;
+
+  button:hover{
+    color: $Extra-Color;
+    border: 2px solid $Extra-Color;
+    box-shadow: 0 0 5px 1px $Extra-Color;
   }
 }
 

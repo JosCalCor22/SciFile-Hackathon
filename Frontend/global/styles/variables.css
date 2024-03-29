@@ -29,7 +29,7 @@ a {
   color: #fff;
 }
 
-/* Mixins */
+/* Mixins and Classes */
 .GlobalButton button {
   width: -moz-fit-content;
   width: fit-content;
