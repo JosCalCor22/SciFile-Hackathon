@@ -100,7 +100,7 @@ function Author() {
     formData.append('file', selectedFile, selectedFile.name); // Include filename
 
     try {
-      const response = await axios.post(URLAPIDATA, formData, {
+      const response = await axios.post(URLAPIFILE, formData, {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'multipart/form-data'
@@ -132,7 +132,7 @@ function Author() {
     setUploadStatus('Uploading...');
 
     try {
-      const response = await axios.post(URLAPIFILE, json, {
+      const response = await axios.post(URLAPIDATA, json, {
         headers: {
           "x-token": 123,
           Accept: 'application/json',
