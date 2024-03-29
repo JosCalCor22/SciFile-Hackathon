@@ -10,8 +10,13 @@ const initContract = async () => {
         if (window.ethereum) {
 
             const provider = new ethers.BrowserProvider(window.ethereum)
+            const userAdress = provider.getSigner();
             const contractAddress = '0xAd7F77623D30ed2802F373c89E4c4B0ACAadFC23';
             const contract = new ethers.Contract(contractAddress, contractABI, await provider.getSigner());
+
+            console.log('Contract:', contract);
+            console.log('Provider', provider);
+            console.log('User address:', userAdress);
 
             return contract
         }

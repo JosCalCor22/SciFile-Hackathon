@@ -1,21 +1,24 @@
+/* Hooks */
 import axios from 'axios';
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+/* SVG imports */
 import arrow from './svg/arrow.svg'
 
-const URLAPI = 'https://ed45-186-154-34-66.ngrok-free.app/hola_mundo/';
+const URLAPI = 'https://3454-186-154-34-66.ngrok-free.app/hola_mundo/';
 
 function Author () { 
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleSubmit = async () => {
-    const response = await axios.post(URLAPI , {
-      message: message,
-    });
-  
-    console.log(response);
+    const messageJSON = {
+      message: message
+    }
+    const response = await axios.post(URLAPI, messageJSON);
+    
+    return console.log(response);
   }
 
   const getFile = (event) => {
@@ -67,7 +70,7 @@ function Author () {
             <input type="number" name="tokens-reward" id="tokens-reward" min="1" max="10" required />
           </div>
           <div className="containerAuthor__functions-submit">
-            <button type='button' onClick={getAllItems}>Submit</button>
+            <button type='button' onClick={handleSubmit}>Submit</button>
           </div>
         </form>
       </section>
