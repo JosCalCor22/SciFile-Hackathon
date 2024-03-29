@@ -1,9 +1,18 @@
 .header {
   justify-content: space-between;
+  align-items: center;
   display: flex;
-  width: 100%;
+  width: 1100px;
+  margin: 0 auto;
   padding: 40px 20px;
 }
-.header__logo p span:first-child {
-  color: blueviolet;
+.header__logo {
+  display: flex;
+  gap: 12px;
+}
+.header__logo--svg {
+  width: 90px;
+}
+.header__logo--slogan span {
+  font-weight: 600;
 }/*# sourceMappingURL=headerStyles.css.map */

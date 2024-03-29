@@ -1,5 +1,6 @@
 /* Hooks */
 import { Link } from "react-router-dom"
+import workflowSVG from "./svg/Workflow.svg"
 
 function HomePage () {
   return (
@@ -31,6 +32,9 @@ function HomePage () {
             </div>
           </div>
         </div>
+      </div>
+      <div className="homepage__img">
+        <img src={workflowSVG} alt="Workflow project" />
       </div>
     </section>
   )

@@ -1,5 +1,7 @@
 .homepage{
   @include Structure-Container;
+  grid-template-rows: 1fr auto;
+  row-gap: 120px;
   &__info{
     &--description{
       width: 450px;
@@ -39,5 +41,10 @@
         }
       }
     }
+  }
+  &__img{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    width: 100%;
   }
 }

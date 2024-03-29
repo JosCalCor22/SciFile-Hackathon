@@ -1,12 +1,19 @@
 /* Hooks */
 import { MetaMaskButton, useAccount, useSignMessage } from "@metamask/sdk-react-ui";
+import logoSVG from "./svg/Logo_2.svg";
 
   function Header() {
   
   return (
     <header className="header">
       <div className="header__logo">
-          <h1>SciFile</h1>
+          <div className="header__logo--svg">
+            <img src={logoSVG} alt="SciFile icon" />
+          </div>
+          <div className="header__logo--slogan">
+            <h1>SciFile</h1>
+            <span>Creating a new way of writing </span>
+          </div>
       </div>
       <div className="header__btnWallet">
         <MetaMaskButton theme={"dark"} color="red" ></MetaMaskButton>

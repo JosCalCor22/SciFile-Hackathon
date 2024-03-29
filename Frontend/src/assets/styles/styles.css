@@ -85,7 +85,7 @@ h1, h2, h3 {
 .tw-transition-all {
   border-radius: 12px;
   background-color: #000;
-  box-shadow: 0 0 10px 1px #0090ff;
+  box-shadow: 0 0 10px 1px #d24873;
 }
 
 .tw-ease-out {
@@ -93,7 +93,7 @@ h1, h2, h3 {
 }
 
 .tw-to-orange-500 {
-  background: linear-gradient(90deg, #0090ff, #007f8c);
+  background: linear-gradient(90deg, #d24873, #7d6db4);
 }
 
 .tw-text-blue-500 {
@@ -103,17 +103,17 @@ h1, h2, h3 {
   font-size: 16px;
   cursor: pointer;
   border-radius: 12px;
-  color: #0090ff;
+  color: #d24873;
   margin: 12px auto 0 auto;
   transition: all 0.5s ease;
   font-weight: 700;
   font-family: "Wix Madefor Text", sans-serif;
   background-color: transparent;
-  border: 2px solid #0090ff;
+  border: 2px solid #d24873;
 }
 
 .tw-text-blue-500:hover {
-  box-shadow: 0 0 5px 1px #0090ff;
+  box-shadow: 0 0 5px 1px #d24873;
 }
 
 .tw-justify-end button {
@@ -130,8 +130,8 @@ h1, h2, h3 {
 }
 
 .tw-justify-end button:hover {
-  border: 1px solid #0090ff;
-  box-shadow: 0 0 5px 1px #0090ff;
+  border: 1px solid #d24873;
+  box-shadow: 0 0 5px 1px #d24873;
 }
 
 .tw-content-center button {
@@ -143,11 +143,11 @@ h1, h2, h3 {
   cursor: pointer;
   border-radius: 8px;
   background-color: transparent;
-  border: 1px solid #0090ff;
+  border: 1px solid #d24873;
 }
 
 .tw-content-center button:hover {
-  box-shadow: 0 0 5px 1px #0090ff;
+  box-shadow: 0 0 5px 1px #d24873;
 }
 
 .header {
@@ -158,11 +158,15 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 40px 20px;
 }
-.header__logo p span:nth-child(2) {
-  color: #0090ff;
+.header__logo {
+  display: flex;
+  gap: 12px;
 }
-.header__logo p span:nth-child(3) {
-  color: #37bdcb;
+.header__logo--svg {
+  width: 90px;
+}
+.header__logo--slogan span {
+  font-weight: 600;
 }
 
 .homepage {
@@ -171,7 +175,9 @@ h1, h2, h3 {
   display: grid;
   margin: 0 auto;
   padding: 0 30px;
-  margin-top: 100px;
+  margin-top: 50px;
+  grid-template-rows: 1fr auto;
+  row-gap: 120px;
 }
 .homepage__info--description {
   width: 450px;
@@ -188,10 +194,10 @@ h1, h2, h3 {
   font-weight: 700;
 }
 .homepage__info--slogan span:nth-child(3) {
-  color: #0090ff;
+  color: #d24873;
 }
 .homepage__info--slogan span:nth-child(5) {
-  color: #37bdcb;
+  color: #5b7dcf;
 }
 .homepage__role {
   justify-content: center;
@@ -204,14 +210,19 @@ h1, h2, h3 {
   margin-top: 12px;
 }
 .homepage__role--btn-options .opt1 button:hover {
-  color: #0090ff;
-  border: 2px solid #0090ff;
-  box-shadow: 0 0 5px 1px #0090ff;
+  color: #d24873;
+  border: 2px solid #d24873;
+  box-shadow: 0 0 5px 1px #d24873;
 }
 .homepage__role--btn-options .opt2 button:hover {
-  color: #37bdcb;
-  border: 2px solid #37bdcb;
-  box-shadow: 0 0 5px 1px #37bdcb;
+  color: #5b7dcf;
+  border: 2px solid #5b7dcf;
+  box-shadow: 0 0 5px 1px #5b7dcf;
+}
+.homepage__img {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: 100%;
 }
 
 .containerAuthor {
@@ -222,7 +233,7 @@ h1, h2, h3 {
   display: grid;
   margin: 0 auto;
   padding: 0 30px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .containerAuthor__role {
   grid-column: 1/3;
@@ -230,11 +241,11 @@ h1, h2, h3 {
   display: flex;
 }
 .containerAuthor__role--arrow:hover {
-  border: 1px solid #0090ff;
+  border: 1px solid #d24873;
 }
 .containerAuthor__role h1 {
   font-size: 50px;
-  color: #0090ff;
+  color: #d24873;
 }
 .containerAuthor__functions {
   justify-content: center;
@@ -259,14 +270,14 @@ h1, h2, h3 {
 .containerAuthor__functions-name input, .containerAuthor__functions-tokens input {
   color: #fff;
   font-family: "Wix Madefor Text", sans-serif;
-  border: 1px solid #0090ff;
+  border: 1px solid #d24873;
 }
 .containerAuthor__functions-name input:hover, .containerAuthor__functions-tokens input:hover {
-  box-shadow: 0 0 10px 0 #0090ff;
+  box-shadow: 0 0 10px 0 #d24873;
 }
 .containerAuthor__functions-name input:active, .containerAuthor__functions-name input:focus, .containerAuthor__functions-tokens input:active, .containerAuthor__functions-tokens input:focus {
   color: #000;
-  background-color: #0090ff;
+  background-color: #d24873;
 }
 .containerAuthor__functions-description {
   flex-direction: column;
@@ -279,22 +290,22 @@ h1, h2, h3 {
 .containerAuthor__functions-description textarea {
   color: #fff;
   font-family: "Wix Madefor Text", sans-serif;
-  border: 1px solid #0090ff;
+  border: 1px solid #d24873;
 }
 .containerAuthor__functions-description textarea:hover {
-  box-shadow: 0 0 10px 0 #0090ff;
+  box-shadow: 0 0 10px 0 #d24873;
 }
 .containerAuthor__functions-description textarea:active, .containerAuthor__functions-description textarea:focus {
   color: #000;
-  background-color: #0090ff;
+  background-color: #d24873;
 }
 .containerAuthor__functions-submit {
   margin-top: 12px;
 }
 .containerAuthor__functions-submit button:hover {
-  color: #0090ff;
-  border: 2px solid #0090ff;
-  box-shadow: 0 0 5px 1px #0090ff;
+  color: #d24873;
+  border: 2px solid #d24873;
+  box-shadow: 0 0 5px 1px #d24873;
 }
 .containerAuthor__article {
   place-items: center;
@@ -302,7 +313,7 @@ h1, h2, h3 {
   grid-row: 2/3;
   display: grid;
   border-radius: 12px;
-  border: 2px dotted #0090ff;
+  border: 2px dotted #d24873;
 }
 .containerAuthor__article--input {
   flex-direction: column;
@@ -320,7 +331,7 @@ h1, h2, h3 {
   display: grid;
   margin: 0 auto;
   padding: 0 30px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .containerReviewer__role {
   grid-column: 1/3;
@@ -328,11 +339,11 @@ h1, h2, h3 {
   display: flex;
 }
 .containerReviewer__role--arrow:hover {
-  border: 1px solid #37bdcb;
+  border: 1px solid #5b7dcf;
 }
 .containerReviewer__role h1 {
   font-size: 50px;
-  color: #37bdcb;
+  color: #5b7dcf;
 }
 .containerReviewer__functions {
   justify-content: center;
@@ -364,14 +375,14 @@ h1, h2, h3 {
   transition: all 0.5s ease;
   font-family: "Wix Madefor Text", sans-serif;
   background-color: transparent;
-  border: 1px solid #37bdcb;
+  border: 1px solid #5b7dcf;
 }
 .containerReviewer__functions-name select:hover {
-  box-shadow: 0 0 10px 0 #37bdcb;
+  box-shadow: 0 0 10px 0 #5b7dcf;
 }
 .containerReviewer__functions-name select:focus, .containerReviewer__functions-name select:active {
   color: #000;
-  background-color: #37bdcb;
+  background-color: #5b7dcf;
 }
 .containerReviewer__functions-description {
   flex-direction: column;
@@ -384,14 +395,14 @@ h1, h2, h3 {
 .containerReviewer__functions-description input {
   color: #fff;
   font-family: "Wix Madefor Text", sans-serif;
-  border: 1px solid #37bdcb;
+  border: 1px solid #5b7dcf;
 }
 .containerReviewer__functions-description input:hover {
-  box-shadow: 0 0 10px 0 #37bdcb;
+  box-shadow: 0 0 10px 0 #5b7dcf;
 }
 .containerReviewer__functions-description input:active, .containerReviewer__functions-description input:focus {
   color: #000;
-  background-color: #37bdcb;
+  background-color: #5b7dcf;
 }
 .containerReviewer__functions-review {
   flex-direction: column;
@@ -404,22 +415,22 @@ h1, h2, h3 {
 .containerReviewer__functions-review textarea {
   color: #fff;
   font-family: "Wix Madefor Text", sans-serif;
-  border: 1px solid #37bdcb;
+  border: 1px solid #5b7dcf;
 }
 .containerReviewer__functions-review textarea:hover {
-  box-shadow: 0 0 10px 0 #37bdcb;
+  box-shadow: 0 0 10px 0 #5b7dcf;
 }
 .containerReviewer__functions-review textarea:active, .containerReviewer__functions-review textarea:focus {
   color: #000;
-  background-color: #37bdcb;
+  background-color: #5b7dcf;
 }
 .containerReviewer__functions-submit {
   margin-top: 12px;
 }
 .containerReviewer__functions-submit button:hover {
-  color: #37bdcb;
-  border: 2px solid #37bdcb;
-  box-shadow: 0 0 5px 1px #37bdcb;
+  color: #5b7dcf;
+  border: 2px solid #5b7dcf;
+  box-shadow: 0 0 5px 1px #5b7dcf;
 }
 .containerReviewer__article {
   place-items: center;
@@ -427,7 +438,7 @@ h1, h2, h3 {
   grid-row: 2/3;
   display: grid;
   border-radius: 12px;
-  border: 2px dotted #37bdcb;
+  border: 2px dotted #5b7dcf;
 }
 .containerReviewer__article--input {
   flex-direction: column;
