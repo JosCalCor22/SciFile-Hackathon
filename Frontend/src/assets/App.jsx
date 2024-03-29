@@ -5,6 +5,7 @@ import { Header } from "../../global/components/HeaderComponent/header";
 import { HomePage } from "./HomePage/Homepage";
 import { Author } from "./AuthorComponent/Author";
 import { Reviewer } from "./ReviewerComponent/Reviewer";
+import { Footer } from "../../global/components/FooterComponent/footer";
 /* Styles */
 import './styles/styles.css'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/reviewer" element={<Reviewer />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   )
 }

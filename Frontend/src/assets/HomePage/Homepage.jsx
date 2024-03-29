@@ -34,6 +34,7 @@ function HomePage () {
         </div>
       </div>
       <div className="homepage__img">
+        <h1>How works our magic?</h1>
         <img src={workflowSVG} alt="Workflow project" />
       </div>
     </section>
