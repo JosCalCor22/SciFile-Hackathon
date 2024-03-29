@@ -24,7 +24,12 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-/* Mixins */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Mixins and Classes */
 .GlobalButton button {
   width: -moz-fit-content;
   width: fit-content;

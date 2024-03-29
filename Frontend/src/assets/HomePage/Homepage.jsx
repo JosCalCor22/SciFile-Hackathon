@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import workflowSVG from "./svg/Workflow.svg"
 
-function HomePage () {
+function HomePage ({ toggleState }) {
   return (
     <section className="homepage">
       <article className="homepage__info">
@@ -32,8 +32,15 @@ function HomePage () {
             </div>
           </div>
         </div>
+        <div className="homepage__role--market">
+          <h2>See our market</h2>
+          <Link to="/marketplace">
+            <button onClick={() => {toggleState(true)}}>Marketplace</button>
+          </Link>
+        </div>
       </div>
       <div className="homepage__img">
+        <h1>How works our magic?</h1>
         <img src={workflowSVG} alt="Workflow project" />
       </div>
     </section>

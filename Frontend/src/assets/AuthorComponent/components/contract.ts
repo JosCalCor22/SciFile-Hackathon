@@ -2,7 +2,6 @@ import { ethers } from 'ethers';
 import contractABI from './abi.json';
 
 
-
 const initContract = async () => {
     try {
         // Connect to MetaMask
