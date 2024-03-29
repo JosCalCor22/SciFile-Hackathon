@@ -3,11 +3,12 @@ import axios from 'axios';
 import { useState } from 'react'
 import { Link, json } from 'react-router-dom'
 import { mint, setUrl } from './components/contract';
+import { ethers } from 'ethers';
 
 /* SVG imports */
 import arrow from './svg/arrow.svg'
 
-const URL = `https://ef6e-186-154-34-66.ngrok-free.app/`
+const URL = `https://ef6e-186-154-34-66.ngrok-free.app`
 const URLAPIDATA = `${URL}/upload_meta_article/`;
 const URLAPIFILE = `${URL}/upload_file/`;
 const URLAPI = `${URL}/hola_mundo/`;
@@ -36,13 +37,14 @@ function Author() {
       uri: "",
     }
 
-    //setUploadStatus(objectDataJSON);
-    //const objectJSON = JSON.stringify(objectDataJSON);
-
     return objectDataJSON;
   }
 
   const main = async () => {
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    const accounts = await provider.listAccounts()
+
+    console.log(`account: ${JSON.stringify(accounts[0]?.address)}`);
     const response_pdf = await sendFilePdf();
     const json = objectJSON();
     if (response_pdf) {
@@ -50,11 +52,11 @@ function Author() {
       json["uri"] = response_pdf;
       const response_json = await sendFileJson(json);
 
-      console.log(response_json);
+      console.log(response_json); 
 
       if (response_json) {
         const txt_nft = await mint(
-          "0xa92d504731aA3E99DF20ffd200ED03F9a55a6219",
+          accounts[0]?.address,
           1,
           1,
           "0x"
@@ -64,7 +66,8 @@ function Author() {
 
         console.log(txt_nft);
 
-        const txt_token = await mint("0xa92d504731aA3E99DF20ffd200ED03F9a55a6219",
+        const txt_token = await mint(
+          accounts[0]?.address,
           2,
           json.tokens,
           "0x"
