@@ -10,7 +10,7 @@ function Reviewer () {
 
   useEffect(() => {
     // Step 3: Make the GET request using Axios in a useEffect hook
-    axios.get('https://9164-186-154-34-66.ngrok-free.app/query/')
+    axios.get('https://9164-186-154-34-66.ngrok-free.app/query/')// refactor uri a variable constante
       .then(response => {
         // Step 4: Update the state variable with the response data
         setOptions(response.data);
