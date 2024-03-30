@@ -1,36 +1,36 @@
+import axios from 'axios';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import arrow from "./svg/arrow.svg";
 
 function Reviewer () {
-  const articles = [
-    {
-      nameArticle: 'Test one',
-      typeArticle: 'Science',
-      id: 1,
-      URL: 'https://files.lighthouse.storage/viewFile/QmfH5Atir6s39igxYP7YRFo35Vux8yidDmVbeDP2xtZjzF',
-    },
-    {
-      nameArticle: 'Test two',
-      typeArticle: 'Sports',
-      id: 2,
-      URL: 'https://files.lighthouse.storage/viewFile/QmfH5Atir6s39igxYP7YRFo35Vux8yidDmVbeDP2xtZjzF',
-    },
-    {
-      nameArticle: 'Test three',
-      typeArticle: 'Art',
-      id: 3,
-      URL: 'https://files.lighthouse.storage/viewFile/QmfH5Atir6s39igxYP7YRFo35Vux8yidDmVbeDP2xtZjzF',
-    },
-    {
-      nameArticle: 'Test fourth',
-      typeArticle: 'Art',
-      id: 4,
-      URL: 'https://files.lighthouse.storage/viewFile/QmfH5Atir6s39igxYP7YRFo35Vux8yidDmVbeDP2xtZjzF',
-    }
-  ]
+  const [options, setOptions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState('');
+  const [currentUri, setCurrentUri] = useState('');
 
-  const [changeArticle, setChangeArticle] = useState(articles[0]);
+  useEffect(() => {
+    // Step 3: Make the GET request using Axios in a useEffect hook
+    axios.get('https://9164-186-154-34-66.ngrok-free.app/query/')
+      .then(response => {
+        // Step 4: Update the state variable with the response data
+        setOptions(response.data);
+        console.log()
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+  // Function to handle changing the selected option
+  const handleChangeSelectedOption = (event) => {
+    const option = event.target.value;
+    const object =  options.find((item) => item.Name == option);
+    console.log(object);
+    const uri = `https://files.lighthouse.storage/viewFile/${object.Hash}`;
+    setSelectedOption(event.target.value);
+    setCurrentUri(uri);
+  };
+
 
   return (
     <section className="containerReviewer">
@@ -46,18 +46,11 @@ function Reviewer () {
         <form action="#" method="post">
           <div className="containerReviewer__functions-name">
             <label htmlFor="name-article">Name article:</label>
-            <select name="name-article" onChange={(e) => {setChangeArticle(articles.find(article => article.nameArticle === e.target.value))}} id="name-article" required>
-              {articles.map((article) => {
-                return(
-                  <option key={article.id}>{article.nameArticle}</option>
-                )
-              })
-              }
+            <select name="name-article" value={selectedOption} onChange={handleChangeSelectedOption} required>
+              {options.map((item, index) => (
+                <option key={index} value={item.Name}>{item.Name}</option>
+              ))}
             </select>
-          </div>
-          <div className="containerReviewer__functions-description">
-            <label htmlFor="description-article">Type of article</label>
-            <span>{changeArticle.typeArticle}</span>
           </div>
           <div className="containerReviewer__functions-review">
             <label htmlFor="tokens-reward">Write your review:</label>
@@ -70,7 +63,7 @@ function Reviewer () {
       </section>
       <section className="containerReviewer__article">
         <div className="containerReviewer__article--input">
-          <iframe src={changeArticle.URL} frameBorder="0"></iframe>
+          <iframe src={currentUri} frameBorder="0"></iframe>
         </div>
       </section>
     </section>
