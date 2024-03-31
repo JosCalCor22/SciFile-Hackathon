@@ -1,6 +1,11 @@
-import axios from 'axios';
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios';
+
+/* Components */
+import { setUrl } from "../AuthorComponent/components/contract";
+
+/* Images */
 import arrow from "./svg/arrow.svg";
 
 function Reviewer () {
@@ -8,9 +13,12 @@ function Reviewer () {
   const [selectedOption, setSelectedOption] = useState('');
   const [currentUri, setCurrentUri] = useState('');
 
+  const URL = 'https://c2b1-186-154-32-172.ngrok-free.app';
+  const URLWEBSITE = 'https://files.lighthouse.storage/viewFile/';
+
   useEffect(() => {
     // Step 3: Make the GET request using Axios in a useEffect hook
-    axios.get('https://9164-186-154-34-66.ngrok-free.app/query/')// refactor uri a variable constante
+    axios.get(`${URL}/query/`)// refactor uri a variable constante
       .then(response => {
         // Step 4: Update the state variable with the response data
         setOptions(response.data);
@@ -31,6 +39,34 @@ function Reviewer () {
     setCurrentUri(uri);
   };
 
+  /* hashURL, review, nameArticle */
+  const sendReview = async (reviewArticle, nameArticle) => {
+    const objectSendJSON = {
+      name: nameArticle,
+      hash: currentUri,
+      review: reviewArticle
+    }
+    /* const parsedObject = JSON.stringify(objectSendJSON); */
+
+    try{
+      const response = await axios.post(`${URL}/upload_meta_review/`, objectSendJSON, {
+        headers: {
+          "x-token": 123,
+          Accept: 'application/json',
+        }
+      });
+
+      if(response.status === 200) { 
+        const newURL = `${URLWEBSITE}${response.data.Hash}`;
+        console.log(`The hash URL is: ${newURL}`);
+        setUrl(newURL);
+        window.location.reload();
+      }
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <section className="containerReviewer">
@@ -46,7 +82,7 @@ function Reviewer () {
         <form action="#" method="post">
           <div className="containerReviewer__functions-name">
             <label htmlFor="name-article">Name article:</label>
-            <select name="name-article" value={selectedOption} onChange={handleChangeSelectedOption} required>
+            <select name="name-article" id='name-article' value={selectedOption} onChange={handleChangeSelectedOption} required>
               {options.map((item, index) => (
                 <option key={index} value={item.Name}>{item.Name}</option>
               ))}
@@ -57,7 +93,14 @@ function Reviewer () {
             <textarea name="tokens-reward" id="tokens-reward" required></textarea>
           </div>
           <div className="containerReviewer__functions-submit">
-            <button type="submit">Submit</button>
+            <button type="button" onClick={() => {
+              const takeValueArticle = document.getElementById('tokens-reward');
+              const takeNameArticle = document.getElementById('name-article');
+              const valueArticle = takeValueArticle.value;
+              const nameArticle = takeNameArticle.value;
+
+              sendReview(valueArticle, nameArticle);
+            }}>Submit</button>
           </div>
         </form>
       </section>

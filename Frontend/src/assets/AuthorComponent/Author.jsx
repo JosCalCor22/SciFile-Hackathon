@@ -8,10 +8,9 @@ import { ethers } from 'ethers';
 /* SVG imports */
 import arrow from './svg/arrow.svg'
 
-const URL = `https://172c-186-154-34-66.ngrok-free.app`
+const URL = `https://c2b1-186-154-32-172.ngrok-free.app`
 const URLAPIDATA = `${URL}/upload_meta_article/`;
 const URLAPIFILE = `${URL}/upload_file/`;
-const URLAPI = `${URL}/hola_mundo/`;
 
 function Author() {
   const [selectedFile, setSelectedFile] = useState(null);
