@@ -38,6 +38,12 @@ To be the leading platform in scientific publishing that eliminates censorship b
 
 ## Technical description
 
+#### FileCoin contract
+<https://calibration.filscan.io/en/address/t410fvv7xoyr5gdwsqaxtopej4tclblfk37bdyvuswca/#message_list>
+
+#### Demo 
+<https://quick-raincoat-crooked.on-fleek.app/> (need backend engrok)
+
 *SciFile* is an innovative platform that integrates cutting-edge technologies to revolutionize the peer review process for scientific articles. By utilizing the *FILE COIN VIRTUAL MACHINE* and an *ERC-1155 smart contract*, SciFile offers a decentralized and secure system for evaluating research papers by field experts. 
 
 The backend, developed in *Python* <https://github.com/Oriojas/SciFile-IPFS.git> using the *FastAPI framework, ensures optimal performance and seamless integration with **Lighthouse, allowing storage of article PDFs and their metadata on the **InterPlanetary File System (IPFS)*, ensuring long-term availability and persistence.
