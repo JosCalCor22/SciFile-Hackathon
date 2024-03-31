@@ -60,7 +60,6 @@ function Reviewer () {
         const newURL = `${URLWEBSITE}${response.data.Hash}`;
         console.log(`The hash URL is: ${newURL}`);
         setUrl(newURL);
-        window.location.reload();
       }
     } catch(error) {
       console.log(error);
