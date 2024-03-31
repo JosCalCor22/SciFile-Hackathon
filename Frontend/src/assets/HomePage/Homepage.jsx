@@ -1,6 +1,7 @@
 /* Hooks */
 import { Link } from "react-router-dom"
 import workflowSVG from "./svg/Workflow.svg"
+import dataEconomy from "./svg/data_economy.svg"
 
 function HomePage ({ toggleState }) {
   return (
@@ -39,9 +40,13 @@ function HomePage ({ toggleState }) {
           </Link>
         </div>
       </div>
-      <div className="homepage__img">
+      <div className="homepage__workflow">
         <h1>How works our magic?</h1>
         <img src={workflowSVG} alt="Workflow project" />
+      </div>
+      <div className="homepage__dataEconomic">
+        <h1>What makes us special?</h1>
+        <img src={dataEconomy} alt="Data Economy" />
       </div>
     </section>
   )

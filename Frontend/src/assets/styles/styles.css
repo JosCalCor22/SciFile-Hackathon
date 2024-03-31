@@ -45,7 +45,7 @@ a {
   border: 2px solid #fff;
 }
 
-.StylesInput input, .containerReviewer__functions-description input, .containerAuthor__functions-name input, .containerAuthor__functions-tokens input {
+.StylesInput input, .containerAuthor__functions-name input, .containerAuthor__functions-tokens input {
   height: 30px;
   font-weight: 500;
   border-radius: 4px;
@@ -53,7 +53,7 @@ a {
   transition: all 0.5s ease;
   background-color: transparent;
 }
-.StylesInput input:focus, .containerReviewer__functions-description input:focus, .containerAuthor__functions-name input:focus, .containerAuthor__functions-tokens input:focus, .StylesInput input:active, .containerReviewer__functions-description input:active, .containerAuthor__functions-name input:active, .containerAuthor__functions-tokens input:active {
+.StylesInput input:focus, .containerAuthor__functions-name input:focus, .containerAuthor__functions-tokens input:focus, .StylesInput input:active, .containerAuthor__functions-name input:active, .containerAuthor__functions-tokens input:active {
   border: none;
   outline: none;
 }
@@ -300,12 +300,19 @@ a {
   border: 2px solid #7d6db4;
   box-shadow: 0 0 5px 1px #7d6db4;
 }
-.homepage__img {
+.homepage__workflow {
   grid-column: 1/3;
   grid-row: 2/3;
   width: 100%;
 }
-.homepage__img h1 {
+.homepage__workflow h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.homepage__dataEconomic {
+  grid-column: 1/3;
+}
+.homepage__dataEconomic h1 {
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -475,17 +482,12 @@ a {
 .containerReviewer__functions-description label {
   font-weight: 700;
 }
-.containerReviewer__functions-description input {
-  color: #fff;
-  font-family: "Wix Madefor Text", sans-serif;
+.containerReviewer__functions-description span {
+  font-weight: 500;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
   border: 1px solid #5b7dcf;
-}
-.containerReviewer__functions-description input:hover {
-  box-shadow: 0 0 10px 0 #5b7dcf;
-}
-.containerReviewer__functions-description input:active, .containerReviewer__functions-description input:focus {
-  color: #000;
-  background-color: #5b7dcf;
 }
 .containerReviewer__functions-review {
   flex-direction: column;
@@ -520,13 +522,15 @@ a {
   grid-column: 1/2;
   grid-row: 2/3;
   display: grid;
+  padding: 12px;
   border-radius: 12px;
   border: 2px dotted #5b7dcf;
 }
 .containerReviewer__article--input {
-  flex-direction: column;
-  align-items: center;
   display: flex;
-  width: 80%;
-  gap: 8px;
+  height: 100%;
+  width: 100%;
+}
+.containerReviewer__article--input iframe {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
