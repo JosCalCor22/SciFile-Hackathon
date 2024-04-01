@@ -1,0 +1,26 @@
+.marketplace {
+  display: flex;
+}
+.marketplace__aside {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+.marketplace__aside--logo {
+  justify-content: center;
+  display: flex;
+}
+.marketplace__aside--logo img {
+  width: 90px;
+}
+.marketplace__aside--nav {
+  flex-direction: column;
+  display: flex;
+  gap: 12px;
+}
+.marketplace__aside--nav li {
+  place-items: center;
+  display: flex;
+  gap: 8px;
+}/*# sourceMappingURL=marketplaceStyles.css.map */

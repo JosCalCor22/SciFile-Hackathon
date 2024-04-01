@@ -533,4 +533,60 @@ a {
 }
 .containerReviewer__article--input iframe {
   width: 100%;
+}
+
+.marketplace {
+  display: flex;
+}
+.marketplace__aside {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  width: 300px;
+  padding: 20px;
+  background-color: #212121;
+}
+.marketplace__aside--logo {
+  justify-content: center;
+  display: flex;
+}
+.marketplace__aside--logo img {
+  width: 90px;
+}
+.marketplace__aside--nav {
+  flex-direction: column;
+  display: flex;
+  gap: 26px;
+}
+.marketplace__aside--nav li {
+  place-items: center;
+  display: flex;
+  gap: 8px;
+}
+.marketplace__aside--nav .inactiveLink span {
+  color: #808080;
+  font-weight: 700;
+}
+.marketplace__aside--terms {
+  padding: 32px 0 12px 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+.marketplace__aside--terms-links {
+  justify-content: space-between;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.marketplace__aside--terms-links p {
+  color: #808080;
+  font-weight: 700;
+}
+.marketplace__aside--terms-rights {
+  text-align: center;
+}
+.marketplace__aside--terms-rights p {
+  font-size: 14px;
+  color: #808080;
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
