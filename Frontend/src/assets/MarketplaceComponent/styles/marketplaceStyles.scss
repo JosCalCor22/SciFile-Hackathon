@@ -1,7 +1,9 @@
 .marketplace{
-  display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 90px 1fr 1fr;
+  overflow: hidden;
+  display: grid;
+  height: 100vh;
   &__aside{
     justify-content: space-between;
     flex-direction: column;
@@ -165,6 +167,7 @@
               width: 100px;
               padding: 8px 0;
               border-radius: 12px;
+              font-family: $Primary-Font;
               img{
                 width: 28px;
                 height: 28px;
@@ -187,6 +190,74 @@
               width: 50px;
             } 
           }
+        }
+        &-card{
+          overflow-y: overlay;
+          overflow-x: hidden;
+          flex-wrap: wrap;
+          display: flex;
+          height: 396px;
+          width: 100%;
+          gap: 12px;
+          padding: 18px 0;
+          .cardArticle{
+            flex-direction: column;
+            display: flex;
+            width: 48%;
+            gap: 18px;
+            padding: 24px 18px;
+            border-radius: 12px;
+            background-color: $Color-Background-Secondary;
+            .cardArticle__title{
+              grid-template-columns: 60px 1fr;
+              grid-template-rows: auto auto;
+              height: 90px;
+              display: grid;
+              column-gap: 8px;
+              img{
+                place-self: center;
+                width: 50px;
+              }
+              h2{
+                font-size: 16px;
+              }
+              p{
+                grid-column: 2 / 3;
+                font-size: 12px;
+                color: $White-Opacity-Color;
+              }
+            }
+            .cardArticle__img{
+              img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 12px;
+              }
+            }
+            .cardArticle__reaction{
+              justify-content: space-between;
+              display: flex;
+              .cardArticele__reaction--icons{
+                list-style: none;
+                display: flex;
+                gap: 14px;
+                li{
+                  place-items: center;
+                  display: flex;
+                  gap: 4px;
+                }
+              }
+            }
+          }
+        }
+        &-card::-webkit-scrollbar{
+          width: 8px;
+          background-color: transparent;
+        }
+        &-card::-webkit-scrollbar-thumb{
+          border-radius: 12px;
+          background-color: $Gray-Opacity-Color;
         }
       }
     }
