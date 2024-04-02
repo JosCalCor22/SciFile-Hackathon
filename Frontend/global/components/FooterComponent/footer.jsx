@@ -30,7 +30,7 @@ function Footer () {
       </div>
       <div className='footer__rights'>
         <p>Creating a better web3 for everyone 🌐</p>
-        <p>© 2022 SciFile. All rights reserved.</p>
+        <p>© 2024 SciFile. All rights reserved.</p>
       </div>
     </footer>
   )

@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+/* Components */
+import { AsideComponent } from "./components/AsideMarketplace/asideMarketplace";
+import { MainComponentMarketplace } from "./components/MainMarketplace/mainMarketplace";
+import { HeaderComponentMarketplace } from "./components/HeaderMarketplace/headerMarketplace";
 
 function Marketplace({ toggleState }) {
   return (
-    <>
-      <Link to="/">
-        <button onClick={() => {toggleState(false)}}>Devolver</button>
-      </Link>
-    </>
+    <section className="marketplace">
+      <AsideComponent />
+      <HeaderComponentMarketplace toggleState={toggleState} />
+      <MainComponentMarketplace toggleState={toggleState}/>
+    </section>
   )
 }
 

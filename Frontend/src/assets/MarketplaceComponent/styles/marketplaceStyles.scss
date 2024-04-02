@@ -1,0 +1,325 @@
+.marketplace{
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 90px 1fr 1fr;
+  overflow: hidden;
+  display: grid;
+  height: 100vh;
+  &__aside{
+    justify-content: space-between;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    background-color: $Color-Background-Secondary;
+    &--logo{
+      justify-content: center;
+      display: flex;
+      img{
+        width: 90px;
+      }
+    }
+    &--nav{
+      flex-direction: column;
+      display: flex;
+      gap: 26px;
+      li{
+        place-items: center;
+        display: flex;
+        gap: 8px;
+        }
+      .inactiveLink{
+        span{
+          color: $Gray-Color;
+          font-weight: $Tittle-Bold;
+        }
+      }
+    }
+    &--terms{
+      padding: 32px 0 12px 0;
+      border-top: 1px solid $Gray-Opacity-Color;
+      &-links{
+        justify-content: space-between;
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+        p{
+          color: $Gray-Color;
+          font-weight: $Tittle-Bold;
+        }
+      }
+      &-rights{
+        text-align: center;
+        p{
+          font-size: 14px;
+          color: $Gray-Color;
+          font-weight: $Tittle-Bold;
+        }
+      }
+    }
+  }
+  &__header{
+    justify-content: space-between;
+    grid-column: 2 / 3;
+    display: flex;
+    padding: 0 30px;
+    &--title{
+      place-items: center;
+      display: flex;
+      img{
+        @include btn-Arrow;
+      }
+      img:hover{
+        border: 1px solid $Extra-Color;
+      }
+      h1{
+        font-size: 50px;
+        color: $Extra-Color;
+      }
+    }
+    &--nav{
+      place-items: center;
+      display: flex;
+      gap: 34px;
+      &-items{
+        display: flex;
+        gap: 12px;
+        img{
+          width: 50px;
+        }
+      }
+    }
+  }
+  &__main{
+    grid-template-columns: 1.7fr 1fr;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    display: grid;
+    &--container{
+      padding: 0 25px;
+      &--searchInput{
+        &-input{
+          place-items: center;
+          display: flex;
+          width: 100%;
+          gap: 12px;
+          padding: 18px 32px;
+          border-radius: 20px;
+          background-color: $Color-Background-Secondary;
+          input{
+            width: 100%;
+            height: 45px;
+            border: none;
+            font-weight: 700;
+            padding-left: 12px;
+            color: $Gray-Color;
+            border-radius: 12px;
+            font-family: $Primary-Font;
+            background-color: transparent;
+            border: 1px solid $Gray-Color !important;
+          }
+        }
+        &-filter{
+          justify-content: end;
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+          padding: 18px 32px;
+          .filters{
+            place-items: center;
+            display: flex;
+            gap: 12px;
+            span{
+              padding: 8px;
+              cursor: pointer;
+              font-weight: 500;
+              height: fit-content;
+              color: $Extra-Color;
+              border-radius: 12px;
+              transition: all .3s  ease;
+              border: 1px solid $Extra-Color;
+            }
+            span:hover{
+              color: $White-Color;
+              border: 1px solid $White-Color;
+            }
+          }
+          .btn-search{
+            @include Tertiary-Button;
+          }
+        }
+      }
+      &--cards{
+        margin-top: 18px;
+        &-feed{
+          justify-content: space-between;
+          display: flex;
+          .buttons{
+            place-items: center;
+            display: flex;
+            gap: 12px;
+            button{
+              justify-content: center;
+              place-items: center;
+              display: flex;
+              gap: 4px;
+              width: 100px;
+              padding: 8px 0;
+              border-radius: 12px;
+              font-family: $Primary-Font;
+              img{
+                width: 28px;
+                height: 28px;
+              }
+            }
+            button:first-child{
+              color: $White-Color;
+              border: 1px solid $Extra-Color;
+              background-color: $Extra-Opacity-Color;
+            }
+            button:last-child{
+              color: $Gray-Color;
+              background-color: transparent;
+              border: 1px solid $Gray-Color;
+            }
+          }
+          .btn-square{
+            display: flex;
+            img{
+              width: 50px;
+            } 
+          }
+        }
+        &-card{
+          overflow-y: overlay;
+          overflow-x: hidden;
+          flex-wrap: wrap;
+          display: flex;
+          height: 400px;
+          width: 100%;
+          gap: 12px;
+          padding: 18px 0;
+          .cardArticle{
+            flex-direction: column;
+            display: flex;
+            width: 48%;
+            gap: 18px;
+            padding: 24px 18px;
+            border-radius: 12px;
+            background-color: $Color-Background-Secondary;
+            .cardArticle__title{
+              grid-template-columns: 60px 1fr;
+              grid-template-rows: auto auto;
+              height: 90px;
+              display: grid;
+              column-gap: 8px;
+              img{
+                place-self: center;
+                width: 50px;
+              }
+              h2{
+                font-size: 16px;
+              }
+              p{
+                grid-column: 2 / 3;
+                font-size: 12px;
+                color: $White-Opacity-Color;
+              }
+            }
+            .cardArticle__img{
+              img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 12px;
+              }
+            }
+            .cardArticle__reaction{
+              justify-content: space-between;
+              display: flex;
+              .cardArticele__reaction--icons{
+                list-style: none;
+                display: flex;
+                gap: 14px;
+                li{
+                  place-items: center;
+                  display: flex;
+                  gap: 4px;
+                }
+              }
+            }
+          }
+        }
+        &-card::-webkit-scrollbar{
+          width: 8px;
+          background-color: transparent;
+        }
+        &-card::-webkit-scrollbar-thumb{
+          border-radius: 12px;
+          background-color: $Gray-Opacity-Color;
+        }
+      }
+    }
+    &--articles{
+      grid-column: 2 / 3;
+      padding-bottom: 12px;
+      &-imgs{
+        flex-direction: column;
+        display: flex;
+        gap: 8px;
+        .container1, .container2{
+          display: flex;
+          gap: 8px;
+          img{
+            height: 200px;
+            width: 48%;
+            object-fit: cover;
+            border-radius: 12px;
+          }
+        }
+        .container2{
+          .img{
+            position: relative;
+            width: 48%;
+            img{
+              width: 100%;
+            }
+          }
+          i{
+            position: absolute;
+            top: 45%;
+            font-weight: $Tittle-Bold;
+            left: calc(27.5% + 10px);
+          }
+        }
+        .container3{
+          position: relative;
+          padding: 12px 8px 0 0;
+          img{
+            width: 100%;
+          }
+          .container3__text{
+            flex-direction: column;
+            position: absolute;
+            display: flex;
+            width: 200px;
+            top: 25%;
+            gap: 8px;
+            left: 10%;
+            i{
+              font-size: 20px;
+              font-weight: $Tittle-Bold;
+            }
+            @include Tertiary-Button;
+            button:hover{
+              color: $White-Color;
+              border: 2px solid $White-Color;
+              box-shadow: 0 0 5px 1px $White-Color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
