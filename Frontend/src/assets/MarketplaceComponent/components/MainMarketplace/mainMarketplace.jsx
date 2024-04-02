@@ -16,6 +16,11 @@ import img1 from './img/img1.png';
 import img2 from './img/img2.png';
 import img3 from './img/img3.png';
 import img4 from './img/img4.png';
+import articleSuggest1 from './img/articleRecom1.png';
+import articleSuggest2 from './img/articleRecom2.png';
+import articleSuggest3 from './img/articleRecom3.png';
+import articleSuggest4 from './img/articleRecom4.png';
+import articleSuggest5 from './img/articleRecom5.png';
 
 function MainComponentMarketplace() {
   const objectsArticles = [
@@ -128,7 +133,26 @@ function MainComponentMarketplace() {
         </div>
       </section>
       <section className="marketplace__main--articles">
-
+        <div className="marketplace__main--articles-imgs">
+            <div className="container1">
+              <img src={articleSuggest1} alt="Img 1" />
+              <img src={articleSuggest2} alt="Img 2" />
+            </div>
+            <div className="container2">
+              <img src={articleSuggest3} alt="Img 3" />
+              <div className='img'>
+                <img src={articleSuggest4} alt="Img 4" />
+                <i>10+ More</i>
+              </div>
+            </div>
+            <div className="container3">
+              <img src={articleSuggest5} alt="Img 5" />
+              <div className="container3__text">
+                <i>Become A Reviewer Today & Start Earning</i>
+                <button>Start Now</button>
+              </div>
+            </div>
+        </div>
       </section>
     </section>
   )
