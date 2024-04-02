@@ -8,7 +8,7 @@ function Marketplace({ toggleState }) {
     <section className="marketplace">
       <AsideComponent />
       <HeaderComponentMarketplace toggleState={toggleState} />
-      <MainComponentMarketplace />
+      <MainComponentMarketplace toggleState={toggleState}/>
     </section>
   )
 }

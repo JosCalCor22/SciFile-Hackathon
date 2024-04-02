@@ -1,3 +1,6 @@
+/* Hooks */
+import { Link } from 'react-router-dom';
+
 /* SVG imports */
 import profilePhoto from './svg/profileIcon.svg';
 import tradingIcon from './svg/tradingIcon.svg';
@@ -22,7 +25,7 @@ import articleSuggest3 from './img/articleRecom3.png';
 import articleSuggest4 from './img/articleRecom4.png';
 import articleSuggest5 from './img/articleRecom5.png';
 
-function MainComponentMarketplace() {
+function MainComponentMarketplace({ toggleState }) {
   const objectsArticles = [
     {
       id: 1,
@@ -149,7 +152,9 @@ function MainComponentMarketplace() {
               <img src={articleSuggest5} alt="Img 5" />
               <div className="container3__text">
                 <i>Become A Reviewer Today & Start Earning</i>
-                <button>Start Now</button>
+                <button onClick={() => toggleState(false)}>
+                  <Link to={"/reviewer"}>Start now</Link>
+                </button>
               </div>
             </div>
         </div>
