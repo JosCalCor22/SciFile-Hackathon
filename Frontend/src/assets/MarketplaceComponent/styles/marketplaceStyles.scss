@@ -1,11 +1,14 @@
 .marketplace{
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 90px 1fr 1fr;
   &__aside{
     justify-content: space-between;
     flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/4;
     display: flex;
     height: 100vh;
-    width: 300px;
     padding: 20px;
     background-color: $Color-Background-Secondary;
     &--logo{
@@ -50,6 +53,38 @@
           font-size: 14px;
           color: $Gray-Color;
           font-weight: $Tittle-Bold;
+        }
+      }
+    }
+  }
+  &__header{
+    justify-content: space-between;
+    grid-column: 2 / 3;
+    display: flex;
+    padding: 0 30px;
+    &--title{
+      place-items: center;
+      display: flex;
+      img{
+        @include btn-Arrow;
+      }
+      img:hover{
+        border: 1px solid $Extra-Color;
+      }
+      h1{
+        font-size: 50px;
+        color: $Extra-Color;
+      }
+    }
+    &--nav{
+      place-items: center;
+      display: flex;
+      gap: 34px;
+      &-items{
+        display: flex;
+        gap: 12px;
+        img{
+          width: 50px;
         }
       }
     }
