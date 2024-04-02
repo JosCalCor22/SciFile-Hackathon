@@ -89,4 +89,106 @@
       }
     }
   }
+  &__main{
+    grid-template-columns: 1.7fr 1fr;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    display: grid;
+    &--container{
+      padding: 0 25px;
+      &--searchInput{
+        &-input{
+          place-items: center;
+          display: flex;
+          width: 100%;
+          gap: 12px;
+          padding: 18px 32px;
+          border-radius: 20px;
+          background-color: $Color-Background-Secondary;
+          input{
+            width: 100%;
+            height: 45px;
+            border: none;
+            font-weight: 700;
+            padding-left: 12px;
+            color: $Gray-Color;
+            border-radius: 12px;
+            font-family: $Primary-Font;
+            background-color: transparent;
+            border: 1px solid $Gray-Color !important;
+          }
+        }
+        &-filter{
+          justify-content: end;
+          display: flex;
+          gap: 12px;
+          margin-top: 16px;
+          padding: 18px 32px;
+          .filters{
+            place-items: center;
+            display: flex;
+            gap: 12px;
+            span{
+              padding: 8px;
+              cursor: pointer;
+              font-weight: 500;
+              height: fit-content;
+              color: $Extra-Color;
+              border-radius: 12px;
+              transition: all .3s  ease;
+              border: 1px solid $Extra-Color;
+            }
+            span:hover{
+              color: $White-Color;
+              border: 1px solid $White-Color;
+            }
+          }
+          .btn-search{
+            @include Tertiary-Button;
+          }
+        }
+      }
+      &--cards{
+        margin-top: 18px;
+        &-feed{
+          justify-content: space-between;
+          display: flex;
+          .buttons{
+            place-items: center;
+            display: flex;
+            gap: 12px;
+            button{
+              justify-content: center;
+              place-items: center;
+              display: flex;
+              gap: 4px;
+              width: 100px;
+              padding: 8px 0;
+              border-radius: 12px;
+              img{
+                width: 28px;
+                height: 28px;
+              }
+            }
+            button:first-child{
+              color: $White-Color;
+              border: 1px solid $Extra-Color;
+              background-color: $Extra-Opacity-Color;
+            }
+            button:last-child{
+              color: $Gray-Color;
+              background-color: transparent;
+              border: 1px solid $Gray-Color;
+            }
+          }
+          .btn-square{
+            display: flex;
+            img{
+              width: 50px;
+            } 
+          }
+        }
+      }
+    }
+  }
 }

@@ -30,7 +30,7 @@ a {
 }
 
 /* Mixins and Classes */
-.GlobalButton button, .containerReviewer__functions-submit button, .containerAuthor__functions-submit button, .homepage__role--market button, .homepage__role--btn-options .opt2 button, .homepage__role--btn-options .opt1 button {
+.GlobalButton button, .marketplace__main--container--searchInput-filter .btn-search button, .containerReviewer__functions-submit button, .containerAuthor__functions-submit button, .homepage__role--market button, .homepage__role--btn-options .opt2 button, .homepage__role--btn-options .opt1 button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 12px;
@@ -620,5 +620,108 @@ a {
   gap: 12px;
 }
 .marketplace__header--nav-items img {
+  width: 50px;
+}
+.marketplace__main {
+  grid-template-columns: 1.7fr 1fr;
+  grid-column: 2/3;
+  grid-row: 2/4;
+  display: grid;
+}
+.marketplace__main--container {
+  padding: 0 25px;
+}
+.marketplace__main--container--searchInput-input {
+  place-items: center;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  padding: 18px 32px;
+  border-radius: 20px;
+  background-color: #212121;
+}
+.marketplace__main--container--searchInput-input input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  font-weight: 700;
+  padding-left: 12px;
+  color: #808080;
+  border-radius: 12px;
+  font-family: "Wix Madefor Text", sans-serif;
+  background-color: transparent;
+  border: 1px solid #808080 !important;
+}
+.marketplace__main--container--searchInput-filter {
+  justify-content: end;
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 18px 32px;
+}
+.marketplace__main--container--searchInput-filter .filters {
+  place-items: center;
+  display: flex;
+  gap: 12px;
+}
+.marketplace__main--container--searchInput-filter .filters span {
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #7d6db4;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #7d6db4;
+}
+.marketplace__main--container--searchInput-filter .filters span:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.marketplace__main--container--searchInput-filter .btn-search button:hover {
+  color: #7d6db4;
+  border: 2px solid #7d6db4;
+  box-shadow: 0 0 5px 1px #7d6db4;
+}
+.marketplace__main--container--cards {
+  margin-top: 18px;
+}
+.marketplace__main--container--cards-feed {
+  justify-content: space-between;
+  display: flex;
+}
+.marketplace__main--container--cards-feed .buttons {
+  place-items: center;
+  display: flex;
+  gap: 12px;
+}
+.marketplace__main--container--cards-feed .buttons button {
+  justify-content: center;
+  place-items: center;
+  display: flex;
+  gap: 4px;
+  width: 100px;
+  padding: 8px 0;
+  border-radius: 12px;
+}
+.marketplace__main--container--cards-feed .buttons button img {
+  width: 28px;
+  height: 28px;
+}
+.marketplace__main--container--cards-feed .buttons button:first-child {
+  color: #fff;
+  border: 1px solid #7d6db4;
+  background-color: rgba(125, 109, 180, 0.5);
+}
+.marketplace__main--container--cards-feed .buttons button:last-child {
+  color: #808080;
+  background-color: transparent;
+  border: 1px solid #808080;
+}
+.marketplace__main--container--cards-feed .btn-square {
+  display: flex;
+}
+.marketplace__main--container--cards-feed .btn-square img {
   width: 50px;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,6 @@
 /* Components */
 import { AsideComponent } from "./components/AsideMarketplace/asideMarketplace";
-import { MainComponentMarketplace } from "./components/mainMarketplace";
+import { MainComponentMarketplace } from "./components/MainMarketplace/mainMarketplace";
 import { HeaderComponentMarketplace } from "./components/HeaderMarketplace/headerMarketplace";
 
 function Marketplace({ toggleState }) {
